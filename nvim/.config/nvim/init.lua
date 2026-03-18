@@ -26,3 +26,7 @@ require("lazy").setup("plugins")
 
 --开启真彩色支持
 vim.opt.termguicolors = true
+
+--新的垂直分屏将默认在当前窗口的右侧
+vim.opt.splitright = true
+
