@@ -67,6 +67,15 @@ return {
           vim.keymap.set("n", "K", vim.lsp.buf.hover, opts)
           
           -- 可以在这里添加更多，比如重命名 <leader>rn 等
+          -- 【新增：双击跳转定义】
+          -- [New: Double-click to jump to definition]
+          opts.desc = "Double Click to Goto Definition"
+          vim.keymap.set("n", "<2-LeftMouse>", function()
+            -- 获取鼠标位置并移动光标，确保跳转的是点击的单词
+            local mouse_pos = vim.fn.getmousepos()
+            vim.api.nvim_win_set_cursor(0, {mouse_pos.line, mouse_pos.column - 1})
+            vim.lsp.buf.definition()
+          end, opts)
         end,
       })
     end,
