@@ -144,6 +144,7 @@ function y() {
 
 alias clip='xclip -selection clipboard'
 alias t='sudo tailscaled --state=/var/lib/tailscale/tailscaled.state'
+alias lg='lazygit'
 
 # 性能模式：开启独显
 alias mode-perf="sudo system76-power graphics nvidia && echo 1"
