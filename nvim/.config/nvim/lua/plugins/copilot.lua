@@ -46,11 +46,14 @@ return {
         - **Language**: Bilingual (Chinese & English).
         - **Goal**: Currently learning English; requires grammar corrections and natural phrasing suggestions.
         - **Tone**: Technical, concise, and grounded.
-      ]]
+      ]],
+      window = {
+        width = 0.3, -- 聊天窗口占屏幕宽度的30%
+      },
     },
     keys = {
       -- 快捷键：按下 <leader>cc 打开/关闭聊天窗 (通常 leader 是空格)
-      { "<leader>cc", "<cmd>CopilotChatToggle<cr>", desc = "Toggle Copilot Chat" },
+      { "<leader>cc", "<cmd>CopilotChatToggle<cr>", desc = "Toggle Copilot Chat", mode = {"n", "v"}},
     },
   },
 }
