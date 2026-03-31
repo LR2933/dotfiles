@@ -1,2 +1,11 @@
 window-decoration = false
-theme = TokyoNight Day
+theme = Catppuccin Mocha
+
+background-opacity = 0.9
+background-blur = true
+
+# 禁用多行粘贴时的确认提示
+confirm-paste-on-multiline = false
+
+# 关闭窗口时不要求确认
+window-confirm-close = false
