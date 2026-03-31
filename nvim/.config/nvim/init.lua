@@ -30,3 +30,6 @@ vim.opt.termguicolors = true
 --新的垂直分屏将默认在当前窗口的右侧
 vim.opt.splitright = true
 
+--禁用回环
+vim.g.tmux_navigator_no_wrap = 1
+
