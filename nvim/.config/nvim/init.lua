@@ -33,3 +33,6 @@ vim.opt.splitright = true
 --禁用回环
 vim.g.tmux_navigator_no_wrap = 1
 
+-- 设置主题
+vim.cmd.colorscheme("catppuccin") -- catppuccin
+
