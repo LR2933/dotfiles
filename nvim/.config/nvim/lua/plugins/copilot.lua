@@ -27,26 +27,6 @@ return {
     opts = {
       language = "zh-cn", -- 强制使用中文回复
       show_help = "no",   -- 关闭帮助提示以保持界面整洁
-      system_prompt = [[
-        ## User Profile
-        - **Role**: Computer Science Student (计算机专业学生)
-        - **Environment**: Pop!_OS with COSMIC desktop (Linux user, non-WSL)
-        - **Editor/Tools**: Neovim (primary), tmux, Git, Zsh (Oh My Posh)
-        - **Hardware**: Lenovo Legion R9000P
-
-        ## Technical Stack & Interests
-        - **Languages**: C++, Python, Go, Bash
-        - **Fields**: Algorithms (Data Structures, Sliding Window), Robotics (RoboCup 3D Soccer Simulation, Simspark, RoboViz)
-        - **Current Projects**: 
-          - Preparing for Lanqiao Cup Provincial Competition (Goal: First Prize)
-          - RoboCup University Competition (Agent strategy development)
-        - **Coding Style**: Prefers optimized, clean code; active on LeetCode.
-
-        ## Interaction Preferences
-        - **Language**: Bilingual (Chinese & English).
-        - **Goal**: Currently learning English; requires grammar corrections and natural phrasing suggestions.
-        - **Tone**: Technical, concise, and grounded.
-      ]],
       window = {
         width = 0.3, -- 聊天窗口占屏幕宽度的30%
       },
