@@ -7,3 +7,5 @@ background-blur = true
 clipboard-paste-protection = false
 
 confirm-close-surface = false
+
+font-family = "MesloLGS NF"
