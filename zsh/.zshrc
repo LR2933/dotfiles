@@ -126,12 +126,17 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # 加载补全
 #-----------------------------------------------------------------------------------
 
-
-#fcitx5
+# export --------------------------------
+export EDITOR=nv
+export VISUAL=nv
 export QT_IM_MODULE=fcitx
 export XMODIFIERS=@im=fcitx
+export IM_MODULE=fcitx
+export GTK_IM_MODULE=fcitx
+export INPUT_METHOD=fcitx
+export SDL_IM_MODULE=fcitx
+#----------------------------------------
 
-export EDITOR=nvim
 
 #yazi
 function y() {
@@ -142,14 +147,8 @@ function y() {
 	rm -f -- "$tmp"
 }
 
-alias clip='xclip -selection clipboard'
-alias t='sudo tailscaled --state=/var/lib/tailscale/tailscaled.state'
-alias lg='lazygit'
 
-# 性能模式：开启独显
-alias mode-perf="sudo system76-power graphics nvidia && echo 1"
-# 省电模式：开启集显
-alias mode-save="sudo system76-power graphics integrated && echo 0"
+
 
 def de() {
   docker exec -it "$1" /bin/bash
@@ -161,4 +160,27 @@ xhost +local:docker > /dev/null
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
+
+# fnm
+FNM_PATH="/home/lr/.local/share/fnm"
+if [ -d "$FNM_PATH" ]; then
+  export PATH="$FNM_PATH:$PATH"
+  eval "$(fnm env --shell zsh)"
+fi
+
+
+
+# alias ---------------------------------------------------------------
+alias clip='xclip -selection clipboard'
+alias t='sudo tailscaled --state=/var/lib/tailscale/tailscaled.state'
+alias lg='lazygit'
 alias c='clear'
+
+# 性能模式：开启独显
+alias mode-perf="sudo system76-power graphics nvidia && echo 1"
+# 省电模式：开启集显
+alias mode-save="sudo system76-power graphics integrated && echo 0"
+#-----------------------------------------------------------------------
+
+
+
