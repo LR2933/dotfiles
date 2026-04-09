@@ -36,3 +36,6 @@ vim.g.tmux_navigator_no_wrap = 1
 -- 设置主题
 vim.cmd.colorscheme("catppuccin") -- catppuccin
 
+-- 在可视模式下粘贴时，将被替换的内容扔进“黑洞寄存器”，保留原有的复制内容
+vim.keymap.set("x", "p", [["_dP]])
+
