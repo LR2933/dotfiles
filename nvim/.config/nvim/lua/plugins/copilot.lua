@@ -7,7 +7,7 @@ return {
     config = function()
       require("copilot").setup({
         suggestion = {
-          enabled = false,
+          enabled = true,
           auto_trigger = true, -- 输入时自动触发建议
           keymap = {
             accept = "<M-l>", -- 按 Alt + l (L) 接受建议
