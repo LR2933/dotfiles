@@ -1,0 +1,16 @@
+2026-04-17 08:50:42 - INFO - rcsssmj.server.server - Starting server...
+2026-04-17 08:50:42 - INFO - rcsssmj.server.communication.tcp_connection_listener - Listening for agent connections on 127.0.0.1:60000
+2026-04-17 08:50:42 - INFO - rcsssmj.server.communication.tcp_connection_listener - Listening for monitor connections on 127.0.0.1:60001
+2026-04-17 08:50:42 - INFO - rcsssmj.server.server - Starting Simulation loop.
+2026-04-17 08:50:42 - INFO - rcsssmj.server.server - Starting server... DONE!
+2026-04-17 08:50:42 - INFO - rcsssmj.server.server - Running a parallel simulation update loop.
+2026-04-17 08:50:56 - DEBUG - rcsssmj.__main__ -  --> HANDLE SIGINT <--
+2026-04-17 08:50:56 - INFO - rcsssmj.server.server - Shutdown requested.
+2026-04-17 08:50:56 - INFO - rcsssmj.server.server - Simulation thread finished.
+2026-04-17 08:50:56 - INFO - rcsssmj.server.server - Shutting down Server...
+2026-04-17 08:50:56 - INFO - rcsssmj.server.communication.tcp_connection_listener - Shutdown agent connection listener thread.
+2026-04-17 08:50:56 - INFO - rcsssmj.server.communication.tcp_connection_listener - Shutdown monitor connection listener thread.
+2026-04-17 08:50:56 - INFO - rcsssmj.server.server - Disconnected agents.
+2026-04-17 08:50:56 - INFO - rcsssmj.server.server - Disconnected monitors.
+2026-04-17 08:50:56 - INFO - rcsssmj.server.server - Shutdown simulation.
+2026-04-17 08:50:56 - INFO - rcsssmj.server.server - Shutting down server... DONE!

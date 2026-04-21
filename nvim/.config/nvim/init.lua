@@ -21,6 +21,9 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
+-- 将 <leader>r 映射为执行 checktime
+vim.keymap.set('n', '<leader>r', '<cmd>checktime<cr>', { desc = '检查文件变更' })
+
 -- 2. 初始化 lazy.nvim 并添加插件
 require("lazy").setup("plugins")
 
