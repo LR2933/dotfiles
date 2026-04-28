@@ -42,3 +42,6 @@ vim.cmd.colorscheme("catppuccin") -- catppuccin
 -- 在可视模式下粘贴时，将被替换的内容扔进“黑洞寄存器”，保留原有的复制内容
 vim.keymap.set("x", "p", [["_dP]])
 
+-- 视图只能通过全局状态栏完全折叠
+vim.opt.laststatus = 3
+
