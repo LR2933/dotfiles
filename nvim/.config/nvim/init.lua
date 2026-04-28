@@ -1,3 +1,5 @@
+vim.opt.runtimepath:append("/home/lr/.local/share/nvim/site")
+
 vim.g.mapleader = " " -- 空格作为 Leader 键
 
 
