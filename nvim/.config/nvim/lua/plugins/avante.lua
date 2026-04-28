@@ -15,8 +15,8 @@ return{
     provider = "openai",
     providers = {
       openai = {
-        endpoint = "https://api.deepseek.com",
-        model = "deepseek-chat",
+        endpoint = "https://api.deepseek.com/v1",
+        model = "deepseek-v4-pro",
         timeout = 30000, -- Timeout in milliseconds
           extra_request_body = {
             temperature = 0,
