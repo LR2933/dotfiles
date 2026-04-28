@@ -127,8 +127,8 @@ export NVM_DIR="$HOME/.nvm"
 #-----------------------------------------------------------------------------------
 
 # export --------------------------------
-export EDITOR=nv
-export VISUAL=nv
+export EDITOR=nvim
+export VISUAL=nvim
 export QT_IM_MODULE=fcitx
 export XMODIFIERS=@im=fcitx
 export IM_MODULE=fcitx
@@ -182,6 +182,8 @@ alias mode-perf="sudo system76-power graphics nvidia && echo 1"
 alias mode-save="sudo system76-power graphics integrated && echo 0"
 
 alias tm="tmux"
+
+alias nv="nvim"
 #-----------------------------------------------------------------------
 
 
