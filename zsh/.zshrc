@@ -180,6 +180,8 @@ alias c='clear'
 alias mode-perf="sudo system76-power graphics nvidia && echo 1"
 # 省电模式：开启集显
 alias mode-save="sudo system76-power graphics integrated && echo 0"
+
+alias tm="tmux"
 #-----------------------------------------------------------------------
 
 
