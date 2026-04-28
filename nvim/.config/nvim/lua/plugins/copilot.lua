@@ -16,25 +16,4 @@ return {
       })
     end,
   },
-
-  -- 2. 聊天窗口插件：负责解释代码、重构或修 Bug
-  {
-    "CopilotC-Nvim/CopilotChat.nvim",
-    dependencies = {
-      { "zbirenbaum/copilot.lua" }, -- 必须依赖上面的插件
-      { "nvim-lua/plenary.nvim" },  -- 许多 Lua 插件必备的基础库
-    },
-    opts = {
-      language = "zh-cn", -- 强制使用中文回复
-      show_help = "no",   -- 关闭帮助提示以保持界面整洁
-      window = {
-        width = 0.3, -- 聊天窗口占屏幕宽度的30%
-      },
-    },
-    keys = {
-      -- 快捷键：按下 <leader>cc 打开/关闭聊天窗 (通常 leader 是空格)
-      { "<leader>cc", "<cmd>CopilotChatToggle<cr>", desc = "Toggle Copilot Chat", mode = {"n", "v"}},
-    },
-  },
 }
-
