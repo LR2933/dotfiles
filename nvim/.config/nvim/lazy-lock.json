@@ -1,5 +1,4 @@
 {
-  "CopilotChat.nvim": { "branch": "main", "commit": "137d3bc527518f5ea982c43c43084496732365c3" },
   "aider.nvim": { "branch": "main", "commit": "1e5fc680a764d2b93f342005d7e4415fec469088" },
   "avante.nvim": { "branch": "main", "commit": "6c00a52cb487bb18ea2413dc95a835c7c91db912" },
   "blink.nvim": { "branch": "main", "commit": "d1e7c7c45d45c6b6a25427bf62db4db73b03ff3d" },
@@ -16,6 +15,7 @@
   "lualine.nvim": { "branch": "master", "commit": "131a558e13f9f28b15cd235557150ccb23f89286" },
   "mason-lspconfig.nvim": { "branch": "main", "commit": "0c2823e0418f3d9230ff8b201c976e84de1cb401" },
   "mason.nvim": { "branch": "main", "commit": "cb8445f8ce85d957416c106b780efd51c6298f89" },
+  "mini.nvim": { "branch": "main", "commit": "48555f1615f08c6318150aacb52bf7d61a5af798" },
   "mini.pick": { "branch": "main", "commit": "437d44eb57312f23e6b931704694fc294922cd88" },
   "neo-tree.nvim": { "branch": "v3.x", "commit": "84c75e7a7e443586f60508d12fc50f90d9aee14e" },
   "nui.nvim": { "branch": "main", "commit": "de740991c12411b663994b2860f1a4fd0937c130" },
