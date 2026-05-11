@@ -186,6 +186,9 @@ alias mode-save="sudo system76-power graphics integrated && echo 0"
 alias tm="tmux"
 
 alias nv="nvim"
+
+# 一键激活当前目录下的虚拟环境
+alias venv="source .venv/bin/activate"
 #-----------------------------------------------------------------------
 
 
