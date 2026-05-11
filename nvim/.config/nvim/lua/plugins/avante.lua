@@ -14,7 +14,8 @@ return{
     -- 例如
     provider = "openai",
     providers = {
-      openai = {
+      deepseek_v4_pro = {
+        __inherited_from = "openai",
         endpoint = "https://api.deepseek.com/v1",
         model = "deepseek-v4-pro",
         timeout = 30000, -- Timeout in milliseconds
@@ -24,6 +25,18 @@ return{
             thinking = { type = "disabled" },
           },
       },
+      deepseek_chat = {
+        __inherited_from = "openai",
+        endpoint = "https://api.deepseek.com/v1",
+        model = "deepseek-chat",
+        timeout = 30000, -- Timeout in milliseconds
+          extra_request_body = {
+            temperature = 0,
+            max_tokens = 20480,
+            thinking = { type = "disabled" },
+          },
+      },
+
     },
   },
   dependencies = {
