@@ -110,8 +110,6 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-bindkey -v  # Vi 模式 (Vi mode)
-
 # --- 迁移自 .bashrc ---
 
 # 1. 加载 Rust 环境 (Rust environment)
