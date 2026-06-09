@@ -1,6 +1,6 @@
 [Hotkey]
 # 反复按切换键时进行轮换
-EnumerateWithTriggerKeys=True
+EnumerateWithTriggerKeys=False
 # 临时在当前和第一个输入法之间切换
 AltTriggerKeys=
 # 向前切换输入法
@@ -11,7 +11,7 @@ EnumerateBackwardKeys=
 EnumerateSkipFirst=False
 
 [Hotkey/TriggerKeys]
-0=Control+space
+0=
 
 [Hotkey/EnumerateGroupForwardKeys]
 0=Super+space
@@ -20,10 +20,10 @@ EnumerateSkipFirst=False
 0=Shift+Super+space
 
 [Hotkey/ActivateKeys]
-0=Hangul_Hanja
+0=Shift+space
 
 [Hotkey/DeactivateKeys]
-0=Hangul_Romaja
+0=Control+space
 
 [Hotkey/PrevPage]
 0=Up
