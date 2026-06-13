@@ -20,7 +20,7 @@ EnumerateSkipFirst=False
 0=Shift+Super+space
 
 [Hotkey/ActivateKeys]
-0=Shift+space
+0=Alt+space
 
 [Hotkey/DeactivateKeys]
 0=Control+space
