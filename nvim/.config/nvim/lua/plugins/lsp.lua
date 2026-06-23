@@ -16,10 +16,12 @@ return {
     dependencies = {
       "mason.nvim",
       "williamboman/mason-lspconfig.nvim",
+      "hrsh7th/cmp-nvim-lsp",
     },
     config = function()
       local lspconfig = require("lspconfig")
       local mason_lspconfig = require("mason-lspconfig")
+      local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
       -- 第一步：配置 Mason-LSPConfig
       mason_lspconfig.setup({
@@ -30,12 +32,15 @@ return {
         handlers = {
           -- 1. 默认处理程序：不仅是 Pyright，所有未单独配置的 server 都会走这里
           function(server_name)
-            lspconfig[server_name].setup({})
+            lspconfig[server_name].setup({
+              capabilities = capabilities,
+            })
           end,
 
           -- 2. 针对 Lua 的特殊配置 (覆盖默认)
           ["lua_ls"] = function()
             lspconfig.lua_ls.setup({
+              capabilities = capabilities,
               settings = {
                 Lua = {
                   diagnostics = {
