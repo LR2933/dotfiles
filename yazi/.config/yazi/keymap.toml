@@ -1,4 +1,5 @@
 [[mgr.prepend_keymap]]
 on   = [ "g", "d" ]
-run  = "cd ~/system/Download"
+run  = "cd ~/System/Download"
 desc = "Go Download"
+
