@@ -1,0 +1,5 @@
+[[mgr.prepend_keymap]]
+on   = [ "g", "d" ]
+run  = "cd ~/System/Download"
+desc = "Go Download"
+
