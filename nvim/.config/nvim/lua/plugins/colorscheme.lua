@@ -30,4 +30,9 @@ return {
     priority = 1000,
     opts = { style = "day" }, -- 选项: storm, night, moon, day
   },
+  {
+    "morhetz/gruvbox",
+    lazy = false,
+    priority = 1000,
+  },
 }
