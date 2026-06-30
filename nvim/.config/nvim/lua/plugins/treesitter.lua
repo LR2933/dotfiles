@@ -5,8 +5,9 @@ return {
     lazy = false,
     config = function()
       local configs = require("nvim-treesitter.config")
-      
+
       configs.setup({
+          ensure_install_dir = vim.fn.stdpath("data") .. "lazy/nvim-treesitter",
           ensure_installed = { "python", "lua", "vim", "vimdoc","markdown", "markdown_inline" },
 
           highlight = {
@@ -15,9 +16,11 @@ return {
           },
 
           indent = {
-            enable = true   
+            enable = true
           },
       })
+
+      vim.opt.runtimepath:append(vim.fn.stdpath("data") .. "lazy/nvim-treesitter")
     end,
   },
 }
