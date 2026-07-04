@@ -129,12 +129,6 @@ export NVM_DIR="$HOME/.nvm"
 # export --------------------------------
 export EDITOR=nvim
 export VISUAL=nvim
-export QT_IM_MODULE=fcitx
-export XMODIFIERS=@im=fcitx
-export IM_MODULE=fcitx
-export GTK_IM_MODULE=fcitx
-export INPUT_METHOD=fcitx
-export SDL_IM_MODULE=fcitx
 
 # TeX Live 2026 Environment Variables
 export PATH=/usr/local/texlive/2026/bin/x86_64-linux:$PATH
