@@ -8,7 +8,7 @@ return {
 
       configs.setup({
           ensure_install_dir = vim.fn.stdpath("data") .. "lazy/nvim-treesitter",
-          ensure_installed = { "python", "lua", "vim", "vimdoc","markdown", "markdown_inline" },
+          ensure_installed = { "python", "lua", "vim", "vimdoc","markdown", "markdown_inline", "c++", "c"},
 
           highlight = {
             enable = true,
