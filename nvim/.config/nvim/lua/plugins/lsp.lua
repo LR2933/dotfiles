@@ -5,7 +5,7 @@ return {
     cmd = "Mason",
     build = ":MasonUpdate",
     opts = {
-      ensure_installed = { "pyright", "lua-language-server" },
+      ensure_installed = { "pyright", "lua-language-server", "clangd" },
     },
   },
 
@@ -25,7 +25,7 @@ return {
 
       -- 第一步：配置 Mason-LSPConfig
       mason_lspconfig.setup({
-        ensure_installed = { "pyright", "lua_ls" }, -- 确保安装
+        ensure_installed = { "pyright", "lua_ls", "clangd" }, -- 确保安装
         automatic_installation = true,
         
         -- 【关键修复】使用 handlers 自动处理 setup，而不是手动调用
@@ -52,6 +52,17 @@ return {
           end,
           
           -- 如果未来需要给 Pyright 加特殊配置，可以在这里加 ["pyright"] = function...
+
+          -- 3. clangd: 使用完整 Mason 路径 + 查询系统 GCC 获取 C++ 头文件路径
+          ["clangd"] = function()
+            lspconfig.clangd.setup({
+              capabilities = capabilities,
+              cmd = {
+                vim.fn.stdpath("data") .. "/mason/bin/clangd",
+                "--query-driver=/usr/bin/gcc*",
+              },
+            })
+          end,
         },
       })
 
