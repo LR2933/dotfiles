@@ -6,4 +6,6 @@ keymap('n', '<leader>q', '<cmd>q<CR>', {desc = "退出" })
 
 keymap('i', 'jk', '<ESC>', { desc = "退出插入模式" })
 
-vim.keymap.set("n", "<leader>th", ":Telescope colorscheme enable_preview=true<CR>", { desc = "Switch Themes" })
+keymap("n", "<leader>th", ":Telescope colorscheme enable_preview=true<CR>", { desc = "Switch Themes" })
+
+keymap('n', 'gl', vim.diagnostic.open_float, { desc = 'Show line diagnostics' })
