@@ -23,5 +23,6 @@ return{
   },
   keys = {
     { "<leader>tt", function () Snacks.terminal.open() end, desc = "Floating Terminal"},
+    { "<leader>gL", function () Snacks.picker.git_log_line() end, desc = "Git Log Line" }
   }
 }
