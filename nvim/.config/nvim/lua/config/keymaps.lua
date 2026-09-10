@@ -9,3 +9,9 @@ keymap('i', 'jk', '<ESC>', { desc = "退出插入模式" })
 keymap("n", "<leader>th", ":Telescope colorscheme enable_preview=true<CR>", { desc = "Switch Themes" })
 
 keymap('n', 'gl', vim.diagnostic.open_float, { desc = 'Show line diagnostics' })
+
+-- 将 <leader>r 映射为执行 checktime
+vim.keymap.set('n', '<leader>r', '<cmd>checktime<cr>', { desc = '检查文件变更' })
+
+-- 在可视模式下粘贴时，将被替换的内容扔进“黑洞寄存器”，保留原有的复制内容
+vim.keymap.set("x", "p", [["_dP]])
