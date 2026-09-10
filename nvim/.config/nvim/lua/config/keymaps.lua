@@ -23,8 +23,8 @@ keymap("n", "<F5>", function()
     local file = vim.fn.shellescape(vim.fn.expand("%"))
 
     if ft == "python" then
-        vim.cmd("split | terminal python3 " .. file)
+        vim.cmd("vsplit | terminal python3 " .. file)
     elseif ft == "sh" then
-        vim.cmd("split | terminal bash " .. file)
+        vim.cmd("vsplit | terminal bash " .. file)
     end
 end)
