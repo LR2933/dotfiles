@@ -18,3 +18,13 @@ opt.conceallevel = 2
 -- 2. 配置 VimTeX 隐藏符号的范围
 -- a: 上下标, b: 粗体/斜体, d: 定界符(如括号), m: 数学符号, g: 希腊字母
 vim.g.tex_conceal = "abdmg"
+
+--开启真彩色支持
+opt.termguicolors = true
+
+--新的垂直分屏将默认在当前窗口的右侧
+opt.splitright = true
+
+-- 视图只能通过全局状态栏完全折叠
+opt.laststatus = 3
+
