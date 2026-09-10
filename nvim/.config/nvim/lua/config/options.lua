@@ -25,6 +25,9 @@ opt.termguicolors = true
 --新的垂直分屏将默认在当前窗口的右侧
 opt.splitright = true
 
+--新的水平分屏将默认在当前窗口的右侧
+opt.splitbelow = true
+
 -- 视图只能通过全局状态栏完全折叠
 opt.laststatus = 3
 
