@@ -12,7 +12,7 @@ return{
   opts = {
     -- 在此处添加任何选项
     -- 例如
-    provider = "openai",
+    provider = "deepseek_chat",
     providers = {
       deepseek_v4_pro = {
         __inherited_from = "openai",
