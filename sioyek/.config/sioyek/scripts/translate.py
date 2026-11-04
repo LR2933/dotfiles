@@ -6,6 +6,9 @@ import os
 import logging
 import traceback
 
+# Short translations use the status bar; longer ones open Zenity.
+STATUS_TEXT_MAX_CHARS = 80
+
 
 API_KEY_FILE = Path.home() / ".sioyek_translate_api_deepseek"
 
@@ -122,6 +125,21 @@ def show_status(sioyek_path, text):
     completed.check_returncode()
 
 
+def show_translation(text):
+    # Plain text via stdin preserves paragraphs and symbols without shell parsing.
+    logging.info("stage=zenity_start text_length=%d", len(text))
+    completed = subprocess.run(
+        ["/usr/bin/zenity", "--text-info", "--title=DeepSeek 翻译",
+         "--width=800", "--height=600", "--ok-label=关闭"],
+        input=text.encode("utf-8"), capture_output=True, check=False,
+    )
+    logging.info("stage=zenity_return returncode=%d stderr_bytes=%d",
+                 completed.returncode, len(completed.stderr))
+    # Closing or cancelling the dialog is normal, not a translation failure.
+    if completed.returncode not in (0, 1):
+        completed.check_returncode()
+
+
 def main():
     setup_logging()
     sioyek_path = None
@@ -148,7 +166,14 @@ def main():
         stage = "api"
         result = translate(selected_text)
         stage = "status"
-        show_status(sioyek_path, result)
+        if len(result.strip()) <= STATUS_TEXT_MAX_CHARS:
+            logging.info("stage=display target=status text_length=%d", len(result.strip()))
+            show_status(sioyek_path, result.strip())
+        else:
+            logging.info("stage=display target=zenity text_length=%d", len(result.strip()))
+            show_status(sioyek_path, "翻译完成，请查看翻译窗口")
+            stage = "zenity"
+            show_translation(result)
         logging.info("stage=done mode=sioyek")
         return 0
     except Exception as exc:
