@@ -187,8 +187,8 @@ alias nv="nvim"
 # 一键激活当前目录下的虚拟环境
 alias venv="source .venv/bin/activate"
 
-#启动 RCSSServerMJ
-alias rcss="uv --directory ~/project/RCSSServerMJ/ run rcssservermj"
+# deepseek harness
+alias deepseek="npx @deepseek-ai/dsh web"
 #-----------------------------------------------------------------------
 
 
